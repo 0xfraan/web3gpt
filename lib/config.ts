@@ -1,4 +1,3 @@
-import { DEPLOYMENT_URL } from "vercel-url"
 import { type Chain, defineChain } from "viem"
 import { arbitrumSepolia, baseSepolia, celoAlfajores, mantleSepoliaTestnet, optimismSepolia, polygonAmoy, sepolia } from "viem/chains"
 import { http, type CreateConnectorFn, cookieStorage, createConfig, createStorage } from "wagmi"
@@ -34,7 +33,7 @@ export const metisSepolia = {
   iconUrl: "/assets/metis-logo.png",
 }
 
-export const APP_URL = DEPLOYMENT_URL
+export const APP_URL = process.env.NEXT_PUBLIC_DEPLOYMENT_URL
 export const DEFAULT_COMPILER_VERSION = "v0.8.28+commit.7893614a"
 export const DEFAULT_CHAIN = metisSepolia
 

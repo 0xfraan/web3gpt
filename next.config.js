@@ -13,6 +13,9 @@ module.exports = {
       },
     ],
   },
+  env: {
+    NEXT_PUBLIC_DEPLOYMENT_URL: `https://${process.env.VERCEL_BRANCH_URL || process.env.VERCEL_URL}` || 'http://localhost:3000',
+  },
   async rewrites() {
     return [
       {
