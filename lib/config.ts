@@ -19,8 +19,9 @@ const ALCHEMY_API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY
 const BLOCKSCOUT_API_KEY = process.env.NEXT_PUBLIC_BLOCKSCOUT_API_KEY
 const TENDERLY_API_KEY = process.env.NEXT_PUBLIC_TENDERLY_API_KEY
 
+const getDeploymentUrl = () => window.location.origin || VERCEL_DEPLOYMENT_URL
 
-export const DEPLOYMENT_URL = VERCEL_DEPLOYMENT_URL
+export const DEPLOYMENT_URL = getDeploymentUrl()
 export const DEFAULT_COMPILER_VERSION = "v0.8.29+commit.ab55807c"
 
 const metisSepoliaWithIcon = {
